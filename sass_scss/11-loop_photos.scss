@@ -1,9 +1,7 @@
-$list-names: julien john sam damian;
+@use '11-photos' as photos;
 
-@use '11-photos';
-
-@each $name in $list_names {
-	.photo-#{$name} {
-		background: image-url("photos/#{$name}.jpg") no-repeat;
-	}
+@each $name in photos.$list-names {
+  .photo-#{$name} {
+    background: image-url("photos/#{$name}.jpg") no-repeat;
+  }
 }
